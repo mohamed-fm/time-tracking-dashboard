@@ -1,0 +1,54 @@
+@media (max-width:1000px) {
+    .contenar{
+        .cards{
+            width: 73%;
+        }
+    }
+}
+
+@media (max-width:530px) {
+    .contenar{
+        flex-direction: column;
+        .person{
+            position: static;
+            width: 100%;
+            .pesron-informations{
+                flex-direction: row;
+                align-items: center;
+                .person-details{
+                    h1{
+                        font-size: clamp(20px , 6vw , 32px);
+                    }
+                }
+            }
+            .categories{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .cards{
+            width: 100%;
+            .card{
+                width: 100%;
+                .main-card{
+                    .hours{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2{
+                            font-size: clamp(15px , 8vw ,42px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:290px) {
+    .contenar{
+        padding: 0;
+    }
+}

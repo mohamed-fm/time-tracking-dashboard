@@ -1,0 +1,21 @@
+
+
+$colors: (
+    'work'  hsl(15, 100%, 70%),
+    'play' hsl(195, 74%, 62%),
+    'study' hsl(348, 100%, 68%),
+    "exercise"  hsl(145, 58%, 55%),
+    "social" hsl(264, 64%, 52%) ,
+    "self-care" hsl(43, 84%, 65%)
+) ;
+@each $name ,$color in $colors{
+    .#{$name}-shadow{
+        background-color: $color !important;
+    }
+    .#{$name}{
+        background-color: $color !important;
+    }
+    .#{$name}-image{
+        background-image: url(./images/icon-#{$name}.svg);
+    }
+}

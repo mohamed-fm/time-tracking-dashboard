@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    /*Main Design Colors*/
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaurated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenar{
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+}
+@media  (min-width:768px) {
+    .contenar{
+        width: 750px;
+    }
+}
+@media  (min-width:992px) {
+    .contenar{
+        width: 970px;
+    }
+}
+@media  (min-width:1200px) {
+    .contenar{
+        width: 1170px;
+    }
+}
+body{
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue);
+    font-family: "Rubik";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+img{
+    width: 100%;
+}
+.project{
+    margin: 40px 0 ;
+}
+.contenar {
+    .person{
+        width: 230px;
+        background-color: var(--Dark-blue);
+        border-radius: 10px;
+        position: sticky;
+        top: 20px;
+        .pesron-informations{
+            height: 70%;
+            border-radius: 10px;
+            background-color: var(--Blue);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .img-holder{
+                img{
+                    width: 75px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                }
+            }
+            .person-details{
+                span{
+                    color: var(--Pale-Blue);
+                    font-size: 13px;
+                }
+                h1{
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .categories{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .category.active {
+                color: white;
+                cursor: default;
+            }
+            .category{
+                font-size: 15px;
+                font-weight: 300;
+                color: var(--Desaurated-blue);
+                transition: .2s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.contenar {
+    .cards{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 65%;
+        gap: 20px;
+        .card{
+            border-radius: 15px;
+            width: 230px;
+            transition: 1s ease-out;
+            .shadow{
+                height: 44px;
+                border-radius: 10px 10px 0 0;
+                .se-image{
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-position: 95% 40%;
+                }
+            }
+            .main-card{
+                padding: 20px 30px;
+                background-color: var(--Dark-blue);
+                border-radius: 10px;
+                transition: .6s ease-out;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                .card-type{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p{
+                        font-weight: 500;
+                        font-size: 18px;
+                        text-transform: capitalize;
+                    }
+                    img{
+                        width: 20px;
+                        cursor: pointer;
+                    }
+                }
+                .hours{
+                    h2{
+                        font-size: 42px;
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                        margin-bottom: 5px;
+                    }
+                    span{
+                        color: var(--Pale-Blue);
+                        font-size: 12px;
+                        display: block;
+                    }
+                    .load{
+                        width: 100px;
+                        background-color:  #6f76c8cc;
+                        animation-name:load-text ;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                        animation-direction: alternate;
+                    }
+                    .load-h2{
+                        height: 20px;
+                    }
+                    .load-p{
+                        height: 10px;
+                    }
+                }
+            }
+            &:hover .main-card{
+                background-color: var(--Desaurated-blue);
+            }
+            &:hover{
+                animation-name: shake;
+                animation-duration: .5s;
+                animation-delay: .3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-direction: alternate;
+            }
+        }
+    }
+}
+@keyframes shake {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: rotate(-2deg);
+    }
+}
+@keyframes load-text {
+    0%{
+        background-color: #6f76c8cc;
+    }
+    50%{
+        background-color: #6f76c857;
+    }
+    100%{
+        background-color: #6f76c8cc;
+    }
+}

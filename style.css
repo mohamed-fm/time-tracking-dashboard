@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  /*Main Design Colors*/
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaurated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenar {
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .contenar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .contenar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenar {
+    width: 1170px;
+  }
+}
+body {
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+  font-family: "Rubik";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+img {
+  width: 100%;
+}
+
+.project {
+  margin: 40px 0;
+}
+
+.contenar .person {
+  width: 230px;
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+  position: sticky;
+  top: 20px;
+}
+.contenar .person .pesron-informations {
+  height: 70%;
+  border-radius: 10px;
+  background-color: var(--Blue);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contenar .person .pesron-informations .img-holder img {
+  width: 75px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.contenar .person .pesron-informations .person-details span {
+  color: var(--Pale-Blue);
+  font-size: 13px;
+}
+.contenar .person .pesron-informations .person-details h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+.contenar .person .categories {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contenar .person .categories .category.active {
+  color: white;
+  cursor: default;
+}
+.contenar .person .categories .category {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--Desaurated-blue);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.contenar .person .categories .category:hover {
+  color: white;
+}
+
+.contenar .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 65%;
+  gap: 20px;
+}
+.contenar .cards .card {
+  border-radius: 15px;
+  width: 230px;
+  transition: 1s ease-out;
+}
+.contenar .cards .card .shadow {
+  height: 44px;
+  border-radius: 10px 10px 0 0;
+}
+.contenar .cards .card .shadow .se-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 95% 40%;
+}
+.contenar .cards .card .main-card {
+  padding: 20px 30px;
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+  transition: 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contenar .cards .card .main-card .card-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenar .cards .card .main-card .card-type p {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.contenar .cards .card .main-card .card-type img {
+  width: 20px;
+  cursor: pointer;
+}
+.contenar .cards .card .main-card .hours h2 {
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.contenar .cards .card .main-card .hours span {
+  color: var(--Pale-Blue);
+  font-size: 12px;
+  display: block;
+}
+.contenar .cards .card .main-card .hours .load {
+  width: 100px;
+  background-color: rgba(111, 118, 200, 0.8);
+  animation-name: load-text;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+.contenar .cards .card .main-card .hours .load-h2 {
+  height: 20px;
+}
+.contenar .cards .card .main-card .hours .load-p {
+  height: 10px;
+}
+.contenar .cards .card:hover .main-card {
+  background-color: var(--Desaurated-blue);
+}
+.contenar .cards .card:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes load-text {
+  0% {
+    background-color: rgba(111, 118, 200, 0.8);
+  }
+  50% {
+    background-color: rgba(111, 118, 200, 0.3411764706);
+  }
+  100% {
+    background-color: rgba(111, 118, 200, 0.8);
+  }
+}
+.work-shadow {
+  background-color: hsl(15, 100%, 70%) !important;
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%) !important;
+}
+
+.work-image {
+  background-image: url(./images/icon-work.svg);
+}
+
+.play-shadow {
+  background-color: hsl(195, 74%, 62%) !important;
+}
+
+.play {
+  background-color: hsl(195, 74%, 62%) !important;
+}
+
+.play-image {
+  background-image: url(./images/icon-play.svg);
+}
+
+.study-shadow {
+  background-color: hsl(348, 100%, 68%) !important;
+}
+
+.study {
+  background-color: hsl(348, 100%, 68%) !important;
+}
+
+.study-image {
+  background-image: url(./images/icon-study.svg);
+}
+
+.exercise-shadow {
+  background-color: hsl(145, 58%, 55%) !important;
+}
+
+.exercise {
+  background-color: hsl(145, 58%, 55%) !important;
+}
+
+.exercise-image {
+  background-image: url(./images/icon-exercise.svg);
+}
+
+.social-shadow {
+  background-color: hsl(264, 64%, 52%) !important;
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%) !important;
+}
+
+.social-image {
+  background-image: url(./images/icon-social.svg);
+}
+
+.self-care-shadow {
+  background-color: hsl(43, 84%, 65%) !important;
+}
+
+.self-care {
+  background-color: hsl(43, 84%, 65%) !important;
+}
+
+.self-care-image {
+  background-image: url(./images/icon-self-care.svg);
+}
+
+@media (max-width: 1000px) {
+  .contenar .cards {
+    width: 73%;
+  }
+}
+@media (max-width: 530px) {
+  .contenar {
+    flex-direction: column;
+  }
+  .contenar .person {
+    position: static;
+    width: 100%;
+  }
+  .contenar .person .pesron-informations {
+    flex-direction: row;
+    align-items: center;
+  }
+  .contenar .person .pesron-informations .person-details h1 {
+    font-size: clamp(20px, 6vw, 32px);
+  }
+  .contenar .person .categories {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contenar .cards {
+    width: 100%;
+  }
+  .contenar .cards .card {
+    width: 100%;
+  }
+  .contenar .cards .card .main-card .hours {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contenar .cards .card .main-card .hours h2 {
+    font-size: clamp(15px, 8vw, 42px);
+  }
+}
+@media (max-width: 290px) {
+  .contenar {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
