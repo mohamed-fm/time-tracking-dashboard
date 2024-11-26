@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [[Add solution URL here](https://github.com/mohamed-fm/time-tracking-dashboard)]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://mohamed-fm.github.io/time-tracking-dashboard/))
 
 ## My process
 
